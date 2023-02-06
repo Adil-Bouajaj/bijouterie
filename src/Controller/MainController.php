@@ -17,4 +17,17 @@ class MainController extends AbstractController
             'controller_name' => 'MainController',
         ]);
     }
+
+    /**
+     * @Route("/", name="acceuil" )
+     */
+    public function accueil()
+    {
+        $message = "Bienvenue";
+        dump($message);
+
+        return $this->render("main/accueil.html.twig", [ "message" => $message
+    ]);
+       
+    }
 }
